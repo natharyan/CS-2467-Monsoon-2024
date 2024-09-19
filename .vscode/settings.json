@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "vector": "cpp",
+        "optional": "cpp",
+        "__bit_reference": "cpp"
+    }
+}

@@ -198,7 +198,6 @@ void slow_conv_dilated_all_cpu_template(
     int64_t batchSize = input.size(0);
     int64_t nInputPlane = weight.size(1);
     int64_t nOutputPlane = weight.size(0);
-    // create a temporary buffer for the im2col/vol2col operation
     Tensor columns = at::empty({0}, options);
     if (output.defined() || grad_weight.defined() || grad_input.defined()) {
         const int64_t m = c10::multiply_integers(kernel_size);
