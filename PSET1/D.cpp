@@ -1,5 +1,5 @@
 /* 
-Dilated Convolution in Pytorch for CPU's
+Dilated Convolution in Pytorch for CPU memory
 
 - Dilated Convolution is the same as the traditional convolution, except it uses gaps filled between kernel elements.
 - 1-dilated convolution will be the same traditional convolution, 2-dilated convolution will one unit gap between each kernel element, and so on.
@@ -208,7 +208,7 @@ void slow_conv_dilated_all_cpu_template(
         columns.resize_({nInputPlane * m, n}); // resize the columns tensor
         }
     }
-    // now initialize the gradients if required
+    // initialize the gradients if required
     if (grad_weight.defined()) {
         grad_weight.zero_();
     }
@@ -499,6 +499,7 @@ void slow_conv_dilated_all_cpu_template(
       // compute the gradient of the bias:
       if (grad_bias.defined()) {
         /*
+        (this comment is from the github repo, not replacing as I would have to closely follow it for explaining)
           Compute:
             grad_bias = scale * grad_output_n * ones + grad_bias
 
