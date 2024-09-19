@@ -1,3 +1,12 @@
+/* 
+Dilated Convolution in Pytorch for CPU's
+
+- Dilated Convolution is the same as the traditional convolution, except it uses gaps filled between kernel elements.
+- 1-dilated convolution will be the same traditional convolution, 2-dilated convolution will one unit gap between each kernel element, and so on.
+- Adding gaps increases the receptive field of the filter, so it can extract both local and global features.
+- This reduces overfitting while maintaining the kernel size and the spacial resolution of the output image.
+*/
+
 #define TORCH_ASSERT_ONLY_METHOD_OPERATORS
 #include <ATen/core/Tensor.h>
 #include <ATen/Dispatch.h>
