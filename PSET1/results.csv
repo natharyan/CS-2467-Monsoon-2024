@@ -1,0 +1,6 @@
+Implementation,Time,Library Implementation,Difference,Vanilla Implementation Backend,Library Backend
+1D Convolution,0.012303829193115234,(Numpy)0.0006208419799804688,0.011682987213134766,Python, Primarily C with some features in Python and C++
+2D Convolution Using Vectorisation,2.133363962173462,(Scipy)0.0022161006927490234,2.131147861480713,Python,C
+2D Convolution Using FFT,0.0009970664978027344,(CV2)0.0006208419799804688,0.0003762245178222656,Python,C++
+2D Convolution Using Linear Seperable Kernel,0.11283397674560547,(CV2)0.00007295608520507812,0.1088099479675293,Python,C++
+2D FFT Convolution Using Pytorch Functions,0.039940834045410156,(CV2)0.0005459785461425781,0.03923678398132324,Python,C++
